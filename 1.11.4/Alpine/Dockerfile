@@ -1,4 +1,3 @@
-
 FROM alpine:3.4
 
 MAINTAINER YoshinoriN
@@ -61,4 +60,4 @@ COPY nginx.conf /etc/nginx/nginx.conf
 
 EXPOSE 80 443
 
-CMD ["nginx", "-g", "daemon off;"]
+CMD ["usr/share/nginx/sbin/nginx", "-g", "daemon off;"]
