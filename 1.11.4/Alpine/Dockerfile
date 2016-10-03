@@ -57,6 +57,7 @@ RUN apk --no-cache update \
   && rm -rf /var/cache/apk/*
 
 COPY nginx.conf /etc/nginx/nginx.conf
+VOLUME /var/log/nginx/
 
 EXPOSE 80 443
 
