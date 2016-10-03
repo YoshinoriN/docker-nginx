@@ -5,8 +5,8 @@ MAINTAINER YoshinoriN
 ENV NGINX_VERSION=1.11.4
 
 RUN apk --no-cache update \
-  && apk --no-cache add --virtual build-dependencies curl build-base pcre-dev openssl-dev libxslt-dev gd-dev geoip-dev \
-  && apk --no-cache add pcre-dev openssl-dev libxslt-dev gd-dev geoip-dev \
+  && apk --no-cache add --virtual build-dependencies curl build-base openssl-dev \
+  && apk --no-cache add pcre-dev libxslt-dev gd-dev geoip-dev \
   && curl -O -s http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
   && tar xvfz nginx-${NGINX_VERSION}.tar.gz \
   && addgroup -S nginx \
