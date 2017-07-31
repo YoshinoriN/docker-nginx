@@ -2,7 +2,7 @@ FROM alpine:3.4
 
 MAINTAINER YoshinoriN
 
-ENV NGINX_VERSION=1.11.8
+ENV NGINX_VERSION=1.13.1
 
 RUN apk --no-cache update \
   && apk --no-cache add --virtual build-dependencies curl build-base openssl-dev \
