@@ -1,12 +1,12 @@
-FROM alpine:3.4
+FROM alpine:3.7
 
 MAINTAINER YoshinoriN
 
-ENV NGINX_VERSION=1.13.1
+ENV NGINX_VERSION=1.13.9
 
 RUN apk --no-cache update \
   && apk --no-cache add --virtual build-dependencies curl build-base openssl-dev \
-  && apk --no-cache add pcre-dev libxslt-dev gd-dev geoip-dev \
+  && apk --no-cache add pcre-dev libxslt-dev gd-dev geoip-dev openssl \
   && curl -O -s http://nginx.org/download/nginx-${NGINX_VERSION}.tar.gz \
   && tar xvfz nginx-${NGINX_VERSION}.tar.gz \
   && addgroup -S nginx \
