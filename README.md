@@ -6,7 +6,7 @@ Docker image for nginx.
 
 |version|OS|
 |---|---|
-|1.13.9|Alpine 3.7|
+|1.15.3|Alpine 3.8|
 
 # Usaga
 
